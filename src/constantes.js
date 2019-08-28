@@ -1,6 +1,7 @@
 export default {
     Constantes: {
 
+
     },
     funciones:{
         soloNumeros:function (evt) {

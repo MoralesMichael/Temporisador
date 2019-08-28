@@ -29,7 +29,7 @@
                 window.open(process.env.VUE_APP_URL_COMPANY, '_blank');
             },
             irHome:function(){
-                this.$router.push({ name: 'p1'});
+                this.$router.push({ name: 'Home'});
             }
         }
     }

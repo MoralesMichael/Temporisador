@@ -61,17 +61,23 @@
 
             iniciarReloj: function () {
                 const year = new Date().getFullYear();
-                const fourthOfJuly = new Date((year + 1), 6, 4).getTime();
+
+                const anio = parseInt(process.env.VUE_APP_FECHA_LIMITE_ANIO)
+                const mes = parseInt(process.env.VUE_APP_FECHA_LIMITE_MES)
+                const dia =parseInt(process.env.VUE_APP_FECHA_LIMITE_DIA)
+               // console.log(anio)
+                const Septiembre19 = new Date(anio, mes, dia).getTime();
+
+
 
 // countdown
-                setInterval(function () {
+                setInterval(()=> {
+
 
                     // get today's date
                     const today = new Date().getTime();
-
                     // get the difference
-                    const diff = fourthOfJuly - today;
-
+                    const diff = Septiembre19 - today;
                     // math
                     this.days = Math.floor(diff / (1000 * 60 * 60 * 24));
                     this.hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
