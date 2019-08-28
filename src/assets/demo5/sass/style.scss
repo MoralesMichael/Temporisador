@@ -1,0 +1,94 @@
+//
+// Demo5 Stylesheets
+//
+
+@import '~vue-material/dist/vue-material.css';
+
+
+
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+// 1: Demo Config
+@import "config";  // demo level framework config override
+
+
+
+// 2: Framework Config
+@import "../../framework/config"; // framework config
+
+// 3: Bootstrap Include
+@import "../../framework/core/bootstrap/bootstrap";
+
+
+//@import '~vue-material/dist/theme/default-dark.css';
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+@include md-register-theme("default", (
+        primary: $primary, // The primary color of your application
+        accent: $secondary, // The accent or secondary color
+        theme: dark // This can be dark or light
+));
+@include md-register-theme("primary", (
+        primary: $primary, // The primary color of your application
+        accent: $secondary, // The accent or secondary color
+        theme: light // This can be dark or light
+));
+@include md-register-theme("menu", (
+        primary: #424242, // The primary color of your application
+        accent: white, // The accent or secondary color
+        theme: dark // This can be dark or light
+));
+@include md-register-theme("inverso", (
+        primary: $secondary, // The primary color of your application
+        accent: $primary, // The accent or secondary color
+        theme: light // This can be dark or light
+));
+@import "~vue-material/dist/theme/all";
+
+// 4: Framework Include
+@import "../../framework/include";
+////////////////////////////////////////////////////////////////
+///////////// DO NOT MODIFY ABOVE INCLUDE ORDER ////////////////
+////////////////////////////////////////////////////////////////
+
+// 5: Demo Configs
+@import "header/config";
+@import "aside/config";
+@import "footer/config";
+
+
+// 6: Demo Includes
+@import "base/base";
+
+@import "header/base";
+@import "header/brand";
+@import "header/topbar";
+@import "header/menu";
+
+@import "header/base-mobile";
+
+@import "aside/base";
+@import "aside/menu";
+
+@import "content/base";
+
+@import "footer/base";
+
+@import "~animate.css/animate.min.css";
+@import "~izitoast/dist/css/iziToast.min.css";
+
+@import "../../framework/vendors/fontawesome5/css/all.css";
+@import "../../framework/vendors/flaticon/flaticon.css";
+@import "../../framework/vendors/flaticon2/flaticon.css";
+@import "../../framework/vendors/line-awesome/css/line-awesome.css";
+
+@import "../custom/wizard/wizard-v1";
+@import "../custom/wizard/wizard-v3";
+//@import "loading";
+@import "../../../misstilos";
+
+//@import '~sweetalert2/src/variables';
+
+//$swal2-confirm-button-background-color: $primary;
+
+//@import '~sweetalert2/src/sweetalert2';

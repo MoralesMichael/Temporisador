@@ -1,0 +1,244 @@
+.linea{
+  border-bottom: 2px solid $primary !important;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+}
+main{
+  padding-bottom: 150px;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+}
+.activo{
+  color: $primary;
+}
+section{
+  padding-top: 20px;
+}
+
+@media (min-width:320px)  {
+  .imagen-pie{
+    right: 0px;
+  }
+  .imagen-btn2{
+    height: 138px !important;
+  }
+  .imagen-btn{
+    height: 160px !important;
+  }
+}
+@media (min-width:801px)  {
+  .imagen-btn2{
+    height: 188px !important;
+  }
+  .imagen-btn{
+    height: 188px !important;
+  }
+}
+
+.flecha:before{
+  content: '';
+  height: 0px;
+  position: absolute;
+  width: 0;
+  border: 20px solid transparent;
+  border-left-color: $secondary;
+  top: 50%;
+  right: -30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+::-moz-selection {
+  color: $secondary;
+  background: $primary;
+}
+
+::selection {
+  color: $secondary;
+  background: $primary;
+}
+
+select::selection {
+  background: $primary;
+}
+select::-moz-selection {
+  background: $primary;
+}
+
+.pac{
+  padding:10px 14px !important;
+  width: 60%;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display:none;
+}
+.pac-item{
+  cursor:pointer;
+}
+.gm-style-iw + div{
+  display: none;
+}
+.gm-style-iw{
+  padding-left: 9px;
+}
+.gm-ui-hover-effect{
+  display: none !important;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.kt-option>span>span>input:checked{
+    background-color: $primary;
+    color: $secondary;
+}
+
+input[disabled] + label{
+  text-decoration:line-through;
+  cursor: not-allowed;
+}
+@include media-breakpoint-up(lg){
+  .animacion{
+    bottom: -700px;
+  }
+}
+h2.titulo{
+  font-family: kia_bold, serif;
+}
+* {
+  outline: none;
+}
+
+
+.vfc-day .marked-class{
+  background-color: $secondary;
+  color: white !important;
+  cursor: pointer;
+}
+.vfc-underline{
+  text-decoration: underline $primary !important;
+}
+.vfc-today{
+  background-color: black !important;
+  color: white;
+}
+.vfc-marked{
+  background-color: $primary !important;
+  color: white;
+}
+.vfc-selected{
+  background-color: $primary !important;
+}
+.vfc-main-container{
+  font-family: kia, serif !important;
+}
+
+@include media-breakpoint-down(md) {
+  .imagen-btn2{
+    height: 138px;
+  }
+  .imagen-btn{
+    height: 160px;
+  }
+  .abajo{
+    width: 100%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .imagen-btn2{
+    height: 188px;
+  }
+  .imagen-btn{
+    height: 188px;
+  }
+  .todo{
+    height: 100%;
+  }
+  .abajo{
+    bottom: 5px;
+    width: 100%;
+  }
+}
+
+
+.flecha:before{
+  content: '';
+  height: 0px;
+  position: absolute;
+  width: 0;
+  border: 20px solid transparent;
+  border-left-color: $secondary;
+  top: 50%;
+  right: -30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.modal .modal-content .modal-header .close::before {
+  content: "";
+}
+.grecaptcha-badge{
+  visibility: collapse !important;
+}
+.md-theme-card-parte{
+  background-color: white;
+  color: black;
+}
+.md-card-content {
+  height: 200px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+}
+.md-card .md-title {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.md-card-header {
+  padding-bottom: 2px;
+  padding-top: 5px !important;
+}
+.md-card-content {
+  padding: 6px;
+}
+.md-tabs.md-theme-default .md-tabs-navigation .md-button.md-active{
+  color: white !important;
+}
+h6.bton {
+  padding-left: 3px;
+  cursor: pointer;
+  color: darken($secondary, 30%);
+  :hover {
+    color: $primary;
+  }
+}
+.md-card-media-actions{
+  padding: 0px;
+}
+
+.sin-p.md-button .md-ripple {
+  padding: 0px;
+}
