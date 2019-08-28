@@ -65,14 +65,8 @@
 
 // countdown
                 setInterval(function () {
-
-                    // get today's date
                     const today = new Date().getTime();
-
-                    // get the difference
                     const diff = fourthOfJuly - today;
-
-                    // math
                     this.days = Math.floor(diff / (1000 * 60 * 60 * 24));
                     this.hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     this.minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -89,18 +83,6 @@
 </script>
 
 <style scoped>
-    @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
-
-    html {
-        display: grid;
-        min-height: 100%;
-    }
-
-    body {
-        display: grid;
-        background: #183059;
-    }
-
     .container {
         position: relative;
         margin: auto;
@@ -110,7 +92,6 @@
     }
 
     h1 {
-        font-family: "Lato", sans-serif;
         text-align: center;
         margin-top: 2em;
         font-size: 1em;
@@ -123,7 +104,6 @@
         color: #F6F4F3;
         text-align: center;
         text-transform: uppercase;
-        font-family: "Lato", sans-serif;
         font-size: .7em;
         letter-spacing: 5px;
         margin-top: 25%;
@@ -154,7 +134,6 @@
     }
 
     .numbers {
-        font-family: "Montserrat", sans-serif;
         color: #183059;
         font-size: 4em;
     }
@@ -290,29 +269,4 @@
         -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
         clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     }
-
-    footer {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        text-transform: uppercase;
-        padding: 10px;
-        font-family: "Lato", sans-serif;
-        font-size: 0.7em;
-    }
-
-    footer p {
-        letter-spacing: 3px;
-        color: #EF2F3C;
-    }
-
-    footer a {
-        color: #F6F4F3;
-        text-decoration: none;
-    }
-
-    footer a:hover {
-        color: #276FBF;
-    }
-
 </style>
