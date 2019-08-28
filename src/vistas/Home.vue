@@ -1,12 +1,15 @@
 <template>
-    <div>
-        Hola Mundo
-    </div>
+        <Temporizador></Temporizador>
+
 </template>
 
 <script>
+    import Temporizador from "../componentes/Temporizador";
     export default {
-        name: "Home"
+        name: "Home",
+        components:{
+            Temporizador
+        }
     }
 </script>
 
