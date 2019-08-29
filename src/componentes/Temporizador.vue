@@ -1,57 +1,32 @@
 <template>
     <!-- partial:index.partial.html -->
-    <div class="container">
-        <div class="balloon white">
-            <div class="star-red"></div>
-            <div class="face">
-                <div class="eye"></div>
-                <div class="mouth happy"></div>
-            </div>
-            <div class="triangle"></div>
-            <div class="string"></div>
-        </div>
-
-        <div class="balloon red">
-            <div class="star"></div>
-            <div class="face">
-                <div class="eye"></div>
-                <div class="mouth happy"></div>
-            </div>
-            <div class="triangle"></div>
-            <div class="string"></div>
-        </div>
+       <div class="container">
+           <div id="timer">
+               <div class = "days" >
+                   <div class="numbers">{{days}}</div>
+                   <br>dias</div>
+               <div class="hours">
+                   <div class="numbers">{{hours}}</div>
+                   <br>horas</div>
+               <div class="minutes">
+                   <div class="numbers">{{minutes}}</div>
+                   <br>minutos</div>
+                   <div class="seconds">
+                       <div class="numbers">{{seconds}}</div>
+                       <br>segundos</div>
 
 
-        <div class="balloon blue">
-            <div class="star"></div>
-            <div class="face">
-                <div class="eye"></div>
-                <div class="mouth happy"></div>
-            </div>
-            <div class="triangle"></div>
-            <div class="string"></div>
-        </div>
+           </div>
 
-        <div id="timer">
-            <div class = "days" >
-                <div class="numbers">{{days}}</div>dias</div>
-            <div class="hours">
-                <div class="numbers">{{hours}}</div>horas</div>
-            <div class="minutes">
-                <div class="numbers">{{minutes}}</div>minutos</div>
-            <div class="seconds">
-                <div class="numbers">{{seconds}}</div>segundos</div>
-            </div>
+       </div>
 
-        <h1>Geely Counter</h1>
-    </div>
+
 </template>
 
 <script>
     export default {
         name: "Temporizador",
         data: () => ({
-
             days:0,
             hours:0,
             minutes:0,
@@ -60,8 +35,6 @@
         methods: {
 
             iniciarReloj: function () {
-                const year = new Date().getFullYear();
-
                 const anio = parseInt(process.env.VUE_APP_FECHA_LIMITE_ANIO)
                 const mes = parseInt(process.env.VUE_APP_FECHA_LIMITE_MES)
                 const dia =parseInt(process.env.VUE_APP_FECHA_LIMITE_DIA)
@@ -71,10 +44,7 @@
 
 
 // countdown
-
                 setInterval(()=> {
-
-
                     // get today's date
                     const today = new Date().getTime();
                     // get the difference
@@ -109,7 +79,7 @@
         margin-top: 2em;
         font-size: 1em;
         text-transform: uppercase;
-        letter-spacing: 5px;
+        letter-spacing: 0px;
         color: #F6F4F3;
     }
 
@@ -118,24 +88,25 @@
         text-align: center;
         text-transform: uppercase;
         font-size: .7em;
-        letter-spacing: 5px;
-        margin-top: 25%;
+        letter-spacing: 1px;
     }
 
     .days, .hours, .minutes, .seconds {
         display: inline-block;
-        padding: 20px;
+        padding: 30px;
         width: 100px;
         border-radius: 5px;
+        margin-left: 7px;
+        margin-right: 7px;
+
     }
 
     .days {
-        background: #EF2F3C;
+        background: #276FBF;
     }
 
     .hours {
-        background: #F6F4F3;
-        color: #183059;
+        background: #276FBF;
     }
 
     .minutes {
@@ -143,22 +114,14 @@
     }
 
     .seconds {
-        background: #F0A202;
+        background: #276FBF;
     }
 
     .numbers {
-        color: #183059;
+        color: #ffffff;
         font-size: 4em;
     }
 
-    .white {
-        position: absolute;
-        background: #F6F4F3;
-        height: 85px;
-        width: 75px;
-        left: 30%;
-        top: 2%;
-    }
 
     .white .triangle {
         border-bottom: 14px solid #F6F4F3;
@@ -169,15 +132,6 @@
         border: 1px solid #F6F4F3;
     }
 
-    .red {
-        position: absolute;
-        background: #EF2F3C;
-        left: 18%;
-        top: 9%;
-        height: 65px;
-        width: 70px;
-    }
-
     .red .triangle {
         border-bottom: 14px solid #EF2F3C;
     }
@@ -186,16 +140,6 @@
         background: #EF2F3C;
         border: 1px solid #EF2F3C;
     }
-
-    .blue {
-        position: absolute;
-        background: #276FBF;
-        height: 80px;
-        width: 80px;
-        left: 60%;
-        top: 5%;
-    }
-
     .blue .triangle {
         border-bottom: 14px solid #276FBF;
     }
@@ -205,81 +149,14 @@
         border: 1px solid #276FBF;
     }
 
-    .balloon {
-        border: 1px solid #000;
-        border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
-        z-index: 2;
-    }
 
-    .eye {
-        position: absolute;
-        width: 7px;
-        height: 7px;
-        top: 40%;
-        left: 22%;
-        background: #000;
-        border-radius: 50%;
-    }
 
-    .eye:after {
-        content: '';
-        left: 35px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #000;
-        position: absolute;
-    }
 
-    .mouth {
-        position: absolute;
-        top: 45%;
-        left: 43%;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-    }
 
-    .happy {
-        border: 2px solid;
-        border-color: transparent #000 #000 transparent;
-        transform: rotate(45deg);
-    }
 
-    .triangle {
-        position: absolute;
-        left: 40%;
-        bottom: -10%;
-        width: 0;
-        height: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-    }
 
-    .string {
-        position: absolute;
-        height: 70px;
-        width: 1px;
-        left: 48%;
-        top: 100%;
-        z-index: -1;
-    }
 
-    .star {
-        width: 20px;
-        height: 20px;
-        background: #F6F4F3;
-        -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    }
 
-    .star-red {
-        width: 30px;
-        height: 30px;
-        margin-left: 51px;
-        margin-top: -5px;
-        background: #EF2F3C;
-        -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    }
+
+
 </style>

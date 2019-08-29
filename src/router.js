@@ -22,9 +22,9 @@ const router = new Router({
         {
             path: "/",
             components: {
-                header: AppHeader,
+               // header: AppHeader,
                 default: Home,
-                footer: AppFooter
+              //  footer: AppFooter
             },
             name: "Home",
         },
